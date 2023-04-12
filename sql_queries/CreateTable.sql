@@ -7,7 +7,10 @@ CREATE TABLE default.customer_churn_data
 `InvoiceDate` DateTime,
 `UnitPrice` Nullable(Float64),
 `CustomerID` Nullable(Int64),
-`Country` Nullable(String)
+`Country` Nullable(String),
+`Year` Nullable(Int32),
+`Month` Nullable(Int32),
+`Quarter` Nullable(Int32),
 )
 ENGINE = MergeTree
 PARTITION BY toYYYYMM(InvoiceDate)
